@@ -1,0 +1,326 @@
+{% comment %} Gift Guide Banner — Figma top bar {% endcomment %}
+
+<section
+  class="gg-hero"
+  {% if section.settings.bg_image %}
+    style="background-image:url({{ section.settings.bg_image | image_url: width: 2400 }}); background-size:cover; background-position:center;"
+  {% endif %}
+>
+
+  <!-- Top bar -->
+  <div class="gg-hero__top">
+    <div class="gg-hero__top-inner">
+
+<!-- Mobile menu toggle -->
+    <div id="mobileMenuToggle"
+         class="mobile-menu-icon mobile-only"
+         role="button"
+         tabindex="0"
+         aria-controls="mobileInlineMenu"
+         aria-expanded="false"
+         aria-label="Open menu">
+      <img id = "menuToggleIcon"
+    src="{{ 'SideMenuIcon.png' | asset_url }}" alt="Menu">
+    </div>
+
+
+
+      <!-- Left: brand chip -->
+      <div class="gg-hero__brand-chip">
+        {% if section.settings.brand_logo != blank %}
+          <img
+            src="{{ section.settings.brand_logo | image_url: width: 600 }}"
+            alt="{{ section.settings.brand_alt | default: 'Tisso Vison' | escape }}"
+            width="{{ section.settings.brand_logo.width }}"
+            height="{{ section.settings.brand_logo.height }}"
+            class="gg-hero__brand-img">
+        {% else %}
+          <img
+            src="{{ 'PageName.png' | asset_url }}"
+            alt="Tisso Vison"
+            width="220"
+            height="51"
+            class="gg-hero__brand-img">
+        {% endif %}
+      </div>
+
+      <!-- tagline -->
+      <div class="gg-hero__tagline">
+        {{ section.settings.tagline }}
+      </div>
+
+      <!-- CTA -->
+      {% if section.settings.cta_label != blank %}
+        <a class="gg-hero__cta" href="{{ section.settings.cta_url }}">
+          <span>{{ section.settings.cta_label }}</span><span aria-hidden="true">→</span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+
+
+  <div id="mobileInlineMenu" class="mobile-inline-menu mobile-only" hidden> 
+<h2 class="mobile-inline-menu__title">Get started with your “Mi Solo” kit</h2> 
+<a class="mobile-inline-menu__cta" href="#"> CHOOSE GIFT <span aria-hidden="true">→</span> </a> </div>
+
+  <div class = "mobile-banner-title mobile-only">
+    The Gift Guide
+    </div>
+
+<div class = "mobile-banner-text mobile-only">
+    Discover Joy: Your Ultimate Holiday Gift 
+    Destination.
+    </div>
+  
+  <div class = "big-gift-banner">
+    <img src = "{{ 'BigGiftBanner.png' | asset_url }}"
+    alt = "Big Gift Banner"
+    class = "big-gift-banner-img desktop-banner"
+    width= "auto"
+    height= "auto"
+    style = width: 100%; max-width: 1600px;
+    >
+        </div>
+
+<div class = "big-gift-banner-2">
+<img src = "{{ 'BigGiftBanner2.png' | asset_url}}"
+    alt = "Big Gift Banner Mobile"
+    class = "big-gift-banner-img mobile-banner"
+    style = "width: 100%; max-width:768px;"
+    >
+
+    <a href = "#" class = "gift-banner-mobile-btn mobile-only">SHOP NOW →</a>   
+  </div>
+
+
+
+   <div class = "random-text">
+
+    <div class = "random-text__inner desktop-only">
+    SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL
+    </div>
+
+    <div class = "random-text__inner mobile-only">
+    SUSTAINABLE, ETHICALLY MADE ACTIVEWEAR
+    </div>
+    </div>
+<br>
+
+  <div class="image-grid-section">
+  <h2 class="image-grid-title">Tisso vison in the wild</h2>
+
+  <div class="image-grid">
+  <div class="image-item">
+    <img src="{{ 'look1.png' | asset_url }}" alt="Look 1">
+    <a href="#" class="overlay-link" data-modal="popup1">
+      <img src="{{ 'Extra.png' | asset_url }}" alt="Plus" class="overlay-icon">
+    </a>
+  </div>
+
+  <div class="image-item">
+    <img src="{{ 'look2.png' | asset_url }}" alt="Look 2">
+    <a href="#" class="overlay-link" data-modal="popup2">
+      <img src="{{ 'Extra.png' | asset_url }}" alt="Plus" class="overlay-icon">
+    </a>
+  </div>
+
+  <div class="image-item">
+    <img src="{{ 'look3.png' | asset_url }}" alt="Look 3">
+    <a href="#" class="overlay-link" data-modal="popup3">
+      <img src="{{ 'Extra.png' | asset_url }}" alt="Plus" class="overlay-icon">
+    </a>
+  </div>
+
+  <div class="image-item">
+    <img src="{{ 'look4.png' | asset_url }}" alt="Look 4">
+    <a href="#" class="overlay-link" data-modal="popup4">
+      <img src="{{ 'Extra.png' | asset_url }}" alt="Plus" class="overlay-icon">
+    </a>
+  </div>
+
+  <div class="image-item">
+    <img src="{{ 'look5.png' | asset_url }}" alt="Look 5">
+    <a href="#" class="overlay-link" data-modal="popup5">
+      <img src="{{ 'Extra.png' | asset_url }}" alt="Plus" class="overlay-icon">
+    </a>
+  </div>
+
+  <div class="image-item">
+    <img src="{{ 'look6.png' | asset_url }}" alt="Look 6">
+    <a href="#" class="overlay-link" data-modal="popup6">
+      <img src="{{ 'Extra.png' | asset_url }}" alt="Plus" class="overlay-icon">
+    </a>
+  </div>
+</div>
+
+</div>
+
+
+<div id="modal-popup1" class="pin-modal" aria-hidden="true">
+  <div class="pin-modal__backdrop" data-close></div>
+  <div class="pin-modal__dialog" role="dialog" aria-modal="true">
+    <button class="pin-modal__close" type="button" data-close aria-label="Close">×</button>
+    {% render 'popup1' %}
+  </div>
+</div>
+
+<div id="modal-popup2" class="pin-modal" aria-hidden="true">
+  <div class="pin-modal__backdrop" data-close></div>
+  <div class="pin-modal__dialog" role="dialog" aria-modal="true">
+    <button class="pin-modal__close" type="button" data-close aria-label="Close">×</button>
+    {% render 'popup2' %}
+  </div>
+</div>
+
+<div id="modal-popup3" class="pin-modal" aria-hidden="true">
+  <div class="pin-modal__backdrop" data-close></div>
+  <div class="pin-modal__dialog" role="dialog" aria-modal="true">
+    <button class="pin-modal__close" type="button" data-close aria-label="Close">×</button>
+    {% render 'popup3' %}
+  </div>
+</div>
+
+<div id="modal-popup4" class="pin-modal" aria-hidden="true">
+  <div class="pin-modal__backdrop" data-close></div>
+  <div class="pin-modal__dialog" role="dialog" aria-modal="true">
+    <button class="pin-modal__close" type="button" data-close aria-label="Close">×</button>
+    {% render 'popup4' %}
+  </div>
+</div>
+
+<div id="modal-popup5" class="pin-modal" aria-hidden="true">
+  <div class="pin-modal__backdrop" data-close></div>
+  <div class="pin-modal__dialog" role="dialog" aria-modal="true">
+    <button class="pin-modal__close" type="button" data-close aria-label="Close">×</button>
+    {% render 'popup5' %}
+  </div>
+</div>
+
+<div id="modal-popup6" class="pin-modal" aria-hidden="true">
+  <div class="pin-modal__backdrop" data-close></div>
+  <div class="pin-modal__dialog" role="dialog" aria-modal="true">
+    <button class="pin-modal__close" type="button" data-close aria-label="Close">×</button>
+    {% render 'popup6' %}
+  </div>
+</div>
+
+
+
+
+</section>
+
+{% schema %}
+{
+  "name": "Gift Guide Banner",
+  "settings": [
+    { "type": "image_picker", "id": "bg_image",   "label": "Background image (pattern)" },
+
+    { "type": "image_picker", "id": "brand_logo", "label": "Brand logo (left)" },
+    { "type": "text","id": "brand_alt",  "label": "Brand image alt text", "default": "Tisso Vison" },
+
+    { "type": "text","id": "tagline",    "label": "Center tagline", "default": "Find the ideal gift for your loved ones." },
+
+    { "type": "text","id": "cta_label",  "label": "Top CTA label (right)", "default": "CHOOSE GIFT" },
+    { "type": "url","id": "cta_url",    "label": "Top CTA link", "default": "/" }
+  ],
+  "presets": [{ "name": "Gift Guide Banner" }]
+}
+{% endschema %}
+
+
+<script>
+document.addEventListener('click', function(e){
+  const link = e.target.closest('a.overlay-link[data-modal]');
+  if (link) {
+    e.preventDefault();
+    const id = 'modal-' + link.dataset.modal; 
+    const modal = document.getElementById(id);
+    if (modal) {
+      modal.classList.add('is-open');
+      document.documentElement.style.overflow = 'hidden';
+    }
+    return;
+  }
+  if (e.target.matches('.pin-modal__backdrop, .pin-modal__close')) {
+    const m = e.target.closest('.pin-modal');
+    m.classList.remove('is-open');
+    document.documentElement.style.overflow = '';
+  }
+});
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape') {
+    document.querySelectorAll('.pin-modal.is-open').forEach(m => m.classList.remove('is-open'));
+    document.documentElement.style.overflow = '';
+  }
+});
+
+document.addEventListener('click', function (e) {
+  const chip = e.target.closest('.popup-chip');
+  if (!chip) return;
+
+  const group = chip.closest('.popup-card__choices');
+  if (!group) return;
+
+
+  group.querySelectorAll('.popup-chip').forEach(c => c.classList.remove('is-active'));
+  chip.classList.add('is-active');
+});
+
+
+document.addEventListener('click', function(e){
+  const toggle = e.target.closest('#mobileMenuToggle');
+  if (!toggle) return;
+
+  const panel = document.getElementById('mobileInlineMenu');
+  const isOpen = !panel.hasAttribute('hidden');
+
+  if (isOpen){
+    panel.setAttribute('hidden', '');
+    toggle.setAttribute('aria-expanded', 'false');
+  } else {
+    panel.removeAttribute('hidden');
+    toggle.setAttribute('aria-expanded', 'true');
+  }
+});
+
+// also close with ESC
+document.addEventListener('keydown', function(e){
+  if (e.key === 'Escape'){
+    const panel = document.getElementById('mobileInlineMenu');
+    const toggle = document.getElementById('mobileMenuToggle');
+    if (panel && !panel.hasAttribute('hidden')){
+      panel.setAttribute('hidden','');
+      if (toggle) toggle.setAttribute('aria-expanded','false');
+    }
+  }
+});
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const menuToggle = document.getElementById("mobileMenuToggle");
+    const menuIcon   = document.getElementById("menuToggleIcon");
+    const menu       = document.getElementById("mobileInlineMenu");
+
+    const openIcon  = "{{ 'SideMenuIcon.png' | asset_url }}"; 
+    const closeIcon = "{{ 'CloseIcon.png' | asset_url }}";    
+
+    menuToggle.addEventListener("click", function() {
+      const isOpen = menu.classList.toggle("is-open");
+
+      // swap icon
+      if (isOpen) {
+        menuIcon.src = closeIcon;
+        menuToggle.setAttribute("aria-expanded", "true");
+      } else {
+        menuIcon.src = openIcon;
+        menuToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+  });
+
+
+</script>
+
+
+
+

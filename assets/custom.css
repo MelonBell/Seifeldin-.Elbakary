@@ -1,0 +1,989 @@
+/* ===== Gift Guide Banner ===== */
+.gg-hero{ height:auto;}          
+
+.gg-hero__top{ background:#F5F5F5; }
+.gg-hero__top-inner{
+  /* Frame 1956 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 35px 250px;
+gap: 330px;
+
+width: 1440px;
+height: 64px;
+
+background: #F5F5F5;
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+                         /* Figma gap */
+}
+
+.gg-hero__brand-chip{
+   padding:2px 30px; 
+   display:inline-block; 
+   border-radius:6px;
+}
+.gg-hero__brand-img{
+  display:block;
+  height:25px;                                       
+  width:151.44;                                      
+}
+
+.gg-hero__tagline{
+  text-align:center; font-size:16px; color:#000000;
+  white-space:nowrap;                            
+}
+
+/* Mobile button */
+.mobile-inline-menu__cta {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 13px 5px;
+    background: #FFF544; /* yellow */
+    text-decoration: none;
+    color: #111; /* dark text */
+    font-weight: 500;
+    border-radius: 2px;
+    width: 200px;
+    margin: 0 auto;  /* center horizontally */
+    overflow: hidden; /* hide sliding bg */
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.mobile-inline-menu__cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #111; /* black slide */
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.mobile-inline-menu__cta:hover::before {
+    left: 0; /* slide in from left */
+}
+
+.mobile-inline-menu__cta:hover {
+    color: #fff; /* text turns white */
+}
+
+
+/* Web/Desktop button */
+.gg-hero__cta {
+    position: relative;
+    background: #FFF544; 
+    color: #111; 
+    text-decoration: none;
+
+    padding: 16px 50px; 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 20px;
+
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20.48px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    text-align: center;
+    vertical-align: middle;
+
+    white-space: nowrap;
+    min-width: 180px;
+    justify-content: center;
+
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.gg-hero__cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #111; /* black slide */
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.gg-hero__cta:hover::before {
+    left: 0;
+}
+
+.gg-hero__cta:hover {
+    color: #fff; /* text turns white */
+}
+
+
+.big-gift-banner{
+    width: 100%;
+    max-width:1000px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.big-gift-banner-img{
+    /* Group 1000008197 */
+
+position: absolute;
+width: 1440px;
+height: 780px;
+left: 0px;
+top: 64px;  
+position: static;
+}
+
+.gift-banner-mobile-btn{
+    display: inline-block;
+    position: absolute;
+    bottom: 20px;
+    left:50%;
+    transform: translate(-50%);
+    background: black;
+    color: white;
+    padding: 9px 40px;
+    font-size: 16px;
+    text-decoration:none;
+    margin-bottom: 140px;
+}
+
+.random-text{
+ /* Frame 1957 */
+
+/* Auto layout */
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 10px 50px;
+gap: 375px;
+
+width: 1440px;
+height: 34px;
+
+background: #F5F5F5;
+
+/* Inside auto layout */
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 0;
+position: static;
+
+}
+
+
+.random-text__inner {
+/* SUSTAINABLE, ETHICALLY MADE CLOTHES IN SIZES XXS TO 6XL */
+
+width: 530px;
+height: 14px;
+
+font-family: 'Jost';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 13px;
+/* identical to box height, or 84% */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.desktop-banner{
+    display: block;
+}
+
+.mobile-banner{
+    display: none;
+}
+
+.image-grid-section{
+    max-width:2000px;
+    margin:40px auto;
+    padding: 0 20px;
+}
+
+.image-grid-title{
+ /* Tisso vison in the wild */
+
+width: 372px;
+height: 43px;
+
+font-family: 'Lustria';
+font-style: normal;
+font-weight: 400;
+font-size: 36px;
+line-height: 120%;
+/* or 43px */
+display: flex;
+align-items: center;
+color: #000000;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.image-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.image-item {
+  display: block;
+width: 100%;
+height: auto;
+position: static;
+ /* Group 1000008178 */
+position: relative;
+width: 433px;
+height: 444px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+.image-item img{
+display: block;
+width: 100%;
+height: auto;
+position: static;
+ /* Group 1000008178 */
+position: relative;
+width: 433px;
+height: 444px;
+
+
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+
+
+.image-item .overlay-icon{
+    position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 32px;   /* adjust size as needed */
+  height: 32px;
+  pointer-events: none;
+}
+
+.overlay-link {
+  position: absolute;
+  z-index: 20;
+  display: block;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  /* position per-image via inline style */
+}
+
+.image-item {
+  position: relative; /* ensures overlay is anchored */
+}
+
+.overlay-link {
+  position: absolute;
+  z-index: 20;
+  display: block;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  
+}
+
+.overlay-link img.overlay-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Different positions for each image using nth-child */
+.image-item:nth-child(1) .overlay-link {
+  bottom: 195px;
+  left: 265px;
+}
+
+.image-item:nth-child(2) .overlay-link {
+  top: 215px;
+  left: 360px;
+}
+
+.image-item:nth-child(3) .overlay-link {
+  top: 80px;
+  left: 275px;
+}
+
+.image-item:nth-child(4) .overlay-link {
+  top: 65px;
+  left: 310px;
+}
+
+.image-item:nth-child(5) .overlay-link {
+  bottom: 320px;
+  right: 195px;
+}
+
+.image-item:nth-child(6) .overlay-link {
+  top: 160px;
+  right: 95px;
+}
+
+
+/* POPUS */
+
+/* icons */
+.image-item{ position:relative; }
+.overlay-link{
+  position:absolute; z-index:20; display:block; width:28px; height:28px; cursor:pointer;
+}
+.overlay-link .overlay-icon{ width:100%; height:100%; object-fit:contain; }
+
+/* container */
+.pin-modal{ 
+    position:fixed; 
+    inset:0; 
+    z-index:1000;
+    display:none; 
+}
+
+
+.pin-modal.is-open{ 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+}
+
+
+.pin-modal__backdrop{ 
+    position:fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(0,0,0,0.5);
+    z-index: 999;
+    display: none;
+ }
+
+ .pin-modal.is-open .pin-modal__backdrop{
+    display: block;
+ }
+
+
+.pin-modal__dialog{
+  position:relative; z-index:1000; width:min(350px, 92vw); height:min(447px, 50vw);
+  background:#fff; border-radius:6px; box-shadow:0 10px 30px rgba(0,0,0,.25);
+  padding:20px;
+}
+.pin-modal__close{ position:absolute; top:8px; right:10px; background:transparent; border:0; font-size:24px; cursor:pointer; }
+
+/* popup card */
+.popup-card{ width:311px; height:447px; }
+.popup-card__media img{ width:120px; height:140px; display:block; top:36px; left:17px; }
+
+
+
+.popup-card__title{ /* Tailored Jacket */
+position: absolute;
+left: 46.62%;
+right: 9.65%;
+top: 20px;
+bottom: 84.79%;
+
+font-family: 'Jost';
+font-style: normal;
+font-weight: 300;
+font-size: 16px;
+line-height: 120%;
+/* or 19px */
+display: flex;
+align-items: center;
+
+color: #000000;
+margin-right:30px;
+ }
+
+
+
+.popup-card__price{ /* 980,00€ */
+position: absolute;
+left: 46.62%;
+right: 32.8%;
+top: 50px;
+bottom: 76.06%;
+
+font-family: 'Lustria';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+/* or 19px */
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+
+
+.popup-card__text{ 
+/* This one-piece swimsuit is crafted from jersey featuring an allover micro Monogram motif in relief. */
+position: absolute;
+width: 146px;
+height: 60px;
+left: calc(50% - 146px/2 + 62.5px);
+top: 85px;
+
+font-family: 'Jost';
+font-style: normal;
+font-weight: 300;
+font-size: 14px;
+line-height: 110%;
+/* or 15px */
+letter-spacing: -0.01em;
+
+color: #000000;
+ }
+
+
+.popup-card__row {
+  margin: 13px 0; 
+  font-size: 14px;
+  display: flex;
+  flex-direction: column; /* label on top, chips below */
+  color: #111;
+
+}
+
+/* Label (Color, Size, etc.) */
+.popup-card__row label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #111;
+  margin-right: 10px;
+}
+
+/* color boxes */
+
+.popup-card__choices{ 
+    display: flex;
+    gap: 0;
+    align: center;
+ }
+
+/* size choices */
+.popup-select{ 
+    width:100%; 
+    padding:12px; 
+     position: static;
+     }
+
+
+.popup-cta{ 
+    margin-top:10px; 
+    padding:12px 18px; 
+    background:#111; 
+    color:#fff; 
+    border:0; 
+    cursor:pointer; 
+    width:100%; 
+    position:static 
+}
+
+/* force each row (Color, Size) onto its own block */
+.popup-card__row {
+  margin: 14px ;          
+  display: block;   
+  color: #111; 
+       
+}
+
+/* color choices */
+.popup-chip {
+  padding: 13px 110px;
+  background-color: #ffffff;
+  border: 1px solid #111;
+  cursor: pointer;
+  color: #111;
+  transition: all 0.2s ease;
+  margin-right: 0px;
+  text-align: left;
+  left: 10px;
+  padding-left: 12px;
+}
+
+.pop-chip button{
+    text-align: left;
+    padding-left: 10px;
+    width: 100%;
+}
+
+/* chips hover */
+.popup-chip:hover {
+  background: #111;       
+  color: #fff;           
+  border-color: #111;      
+}
+
+
+/* hover settings */
+.popup-card__choices .popup-chip.is-active {
+  background:#111 ;
+  color:#fff ;
+  border-color:#111 ;
+}
+
+
+/* display options */
+.desktop-only{
+    display:block;
+}
+
+.mobile-only{
+    display:none;
+}
+
+
+
+
+
+
+
+/* Mobile styles */
+@media (max-width: 768px) {
+
+    body, html{
+        overflow-x: hidden;
+    }
+
+    .desktop-only{
+    display:none;
+}
+
+.mobile-only{
+    display:block;
+}
+
+.mobile-menu-icon{
+    position: absolute;
+    left: 14px;
+    top: 10px;
+    width: 28px;
+    height: 28px;
+    z-index: 5;
+    cursor: pointer;
+  }
+  .mobile-menu-icon img{ 
+    margin-top: 21px;
+    margin-left: 5px;
+    width: 20px; 
+    height: auto; 
+    display: block; }
+
+ .menuToggleIcon{
+    width: 20px;
+    height: auto;
+ }
+
+
+  .mobile-inline-menu[hidden]{ display: none; }
+  .mobile-inline-menu{
+    padding: 16px 18px;
+    background: #f5f5f5;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    margin-top: 6px; /* sits right under the title */
+  }
+  .mobile-inline-menu__title{
+    margin: 0 0 10px;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+  }
+  .mobile-inline-menu__cta {
+    position: relative;
+    display: block;
+    text-align: center;
+    padding: 13px 5px;
+    background: #FFF544; /* yellow */
+    text-decoration: none;
+    color: #111; /* dark text */
+    font-weight: 500;
+    border-radius: 2px;
+    width: 200px;
+    margin: 0 auto;  /* center horizontally */
+    overflow: hidden; /* hide sliding bg */
+    z-index: 1;
+    transition: color 0.3s ease;
+}
+
+.mobile-inline-menu__cta::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #111; /* black slide */
+    transition: left 0.4s ease;
+    z-index: -1;
+}
+
+.mobile-inline-menu__cta:hover::before {
+    left: 0; /* slide in from left */
+}
+
+.mobile-inline-menu__cta:hover {
+    color: #fff; /* text turns white */
+}
+
+
+.gg-hero__cta{
+  background:#FFF544; 
+  color:#111; 
+  text-decoration:none;
+
+  padding:16px 50px; 
+  display:inline-flex; 
+  align-items:center; 
+  gap:20px;
+
+  font-family: 'Jost', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 20.48px;
+  letter-spacing: 0px;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+
+  white-space: nowrap;
+  min-width: 180px;
+  justify-content: center;
+}
+
+.close-btn{
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.gg-hero__brand-img{
+   padding:2px 30px; 
+   display:inline-block; 
+   border-radius:6px;
+   margin-left: 55px;
+   margin-top: 10px;
+}
+
+.mobile-banner-title{
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin: 10px 0;
+    color: #111;
+    margin-top: 30px; 
+}
+
+
+.mobile-banner-text{
+    display: none;
+}
+
+.mobile-banner-text{
+    display: block;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px 0;
+    color: #111;
+}
+
+
+.desktop-banner{
+    display: none;
+}
+
+.mobile-banner{
+    display: block;
+}
+
+.big-gift-banner-2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: -40px;
+  }
+
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+  }
+
+
+  .image-grid-title{
+    font-size: 25px;
+    margin: 10px auto;
+    margin-left: 40px;
+    margin-top: -20px;
+  }
+
+.image-item{
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.image-item img{
+  width:100%;
+    height: auto;
+    display: auto;
+}
+
+.overlay-link{
+position: absolute;
+top:8px;
+right: 8px;
+width: 24px;
+height: 24px;
+z-index: 2;
+}
+
+
+  .random-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   background: #f5f5f5;
+  }
+
+  .random-text__inner{
+     font-size: 14px;
+     text-align: center;
+     margin-right: 1060px;
+  }
+
+  .overlay-icon {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+
+  /* Popup adjustments */
+
+.pin-modal{
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: none;
+    align-items: flex start;
+    justify-content: center;
+    padding: 16px;
+    overflow: auto;
+}
+
+.pin-modal.is-open{
+    display: flex;
+}
+
+..pin-modal__backdrop{
+    position: absolute;
+    inset: 0;
+}
+
+  .pin-modal__dialog {
+   /* Frame 1000009749 */
+
+position: relative;
+width: 311px;
+height: 447px;
+
+background: #FFFFFF;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+border-radius: 0;
+  }
+
+
+.pop-card__body{
+    margin-bottom: 30px;
+}
+
+.popup-card__title {
+    margin: 5px 0 20px;
+    font-size: 16px;
+    margin-left:3px;
+  }
+
+.pop-card__price{
+/* 980,00€ */
+
+position: absolute;
+left: 46.62%;
+right: 32.8%;
+top: 20.13%;
+bottom: 75.62%;
+
+font-family: 'Lustria';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 120%;
+/* or 19px */
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+  }
+
+
+  .popup-card__text{
+    margin: 15px 0 30px;
+    font-size: 13px;
+    margin-bottom: 80px;
+    
+  }
+
+.popup-card__row1{
+    font-size: 14px;
+    color: #111111;
+    margin-bottom: 10px;
+  }
+
+  .popup-chip {
+    flex: 1 1 48%;
+    position: left;
+    align-items: left;
+    justify-content: left;
+    width: 56%;
+    height: 45px;
+    text-align: center;
+    background: #FFFFFF;
+    border: 1;
+    border-color: #111111;
+    color: #111;
+    transition: all .2s ease;
+    cursor: pointer;
+  }
+
+   
+  .popup-card__choices{
+    display: flex;
+    width: 78%;
+    gap:0;
+    position: relative;
+    margin-left:1px;
+  }
+
+  .popup-card__row{
+    font-size: 14px;
+    margin-right: 30px;
+    margin-left: -1px;
+  }
+
+  .popup-select {
+    width: 97%;
+    align-items: center;
+    position: CENTER;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1;
+    margin-right: 20px;
+  }
+
+  .popup-cta {
+   /* Group 1000007810 */
+
+position: absolute;
+width: 271px;
+height: 45px;
+left: 20px;
+top: 377px;
+
+
+  }
+
+
+  .image-item:nth-child(1) .overlay-link {
+  bottom: 195px;
+  left: 110px;
+}
+
+.image-item:nth-child(2) .overlay-link {
+  top: 5px;
+  left: 100px;
+}
+
+.image-item:nth-child(3) .overlay-link {
+  top: 3px;
+  left: 100px;
+}
+
+.image-item:nth-child(4) .overlay-link {
+  top: 5px;
+  left: 105px;
+}
+
+.image-item:nth-child(5) .overlay-link {
+  bottom: 310px;
+  right: 40px;
+}
+
+.image-item:nth-child(6) .overlay-link {
+  top: 8px;
+  right: 40px;
+}
+
+}
+
+
+
+
